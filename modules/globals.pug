@@ -1,0 +1,36 @@
+- 
+  var phuket = {
+    wrap: function(attrs) {
+      return {
+        hasClass: function(pattern) {
+          const re = RegExp(`(?:^|\\s)${pattern}(?!\\S)`);
+          return attrs.class.match(re);
+        },
+        hasAttr: function(name, value) {
+          if (value != null) {
+            return attrs.name === value;
+          } else {
+            return attrs.name != null;
+          }
+        },
+        addClass: function(...classes) {
+          classes.forEach(function(cl) {
+            return attrs.class = attrs.class != null ? attrs.class === '' ? cl : attrs.class + ' ' + cl : attrs.class = cl;
+          });
+        },
+        removeClass: function(...classes) {
+          const re = RegExp(`(?:^|\\s)(${classes.join('|')})(?!\\S)`, "g");
+          if (attrs.class != null) {
+            attrs.class = attrs.class.replace(re, '');
+          }
+        },
+        addAttr: function(name, value) {
+          attrs[name] = value;
+        },
+        removeAttr: function(name) {
+          delete attrs.name;
+        }
+      };
+    }
+
+  };

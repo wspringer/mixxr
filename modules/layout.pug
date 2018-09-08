@@ -1,0 +1,20 @@
+doctype html
+block includes
+
+html(lang="en" prefix="og: http://ogp.me/ns#")
+  head
+    meta(charset="utf-8")
+    meta(http-equiv="x-ui-compatible" content="ie=edge")
+    title Coco
+    meta(name="description" content="Coco")
+    meta(name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0")
+    link(rel="stylesheet" type="text/css" href="/index.css")
+    block header
+    link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/themes/prism.css")
+  body
+    h2#buttons Buttons
+    include buttons/index
+    script(src="http://localhost:35729/livereload.js")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/prism.js")
+    script(src="https://cdn.rawgit.com/wspringer/prism/135a74b1bb4ca67db7a3b12524d6a3c5f361e87d/components/prism-pug.js")
+    //- script(src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/components/prism-pug.min.js")

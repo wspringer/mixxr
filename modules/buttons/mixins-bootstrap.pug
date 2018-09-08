@@ -1,0 +1,19 @@
+mixin m-button-alike(el)    
+  - 
+    const attrs = phuket.wrap(attributes);
+    attrs.addClass('btn');
+    if (attrs.hasClass('m-primary')) {
+      attrs.removeClass('m-primary');
+      attrs.addClass('btn-primary');
+    } else {
+      attrs.addClass('btn-secondary');
+    }    
+  #{el}&attributes(attributes): block
+    
+
+mixin m-button
+  +m-button-alike('button')&attributes(attributes): block
+    
+    
+mixin m-button-a
+  +m-button-alike('a')(href="#" role="button")&attributes(attributes): block

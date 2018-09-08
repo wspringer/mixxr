@@ -1,0 +1,14 @@
+mixin m-button-alike(el)
+  - 
+    var cl = attributes['m-primary'] ? 'button is-primary' : 'button';
+  #{el}(class=cl)&attributes(phuket.strip(attributes)) 
+    block
+
+mixin m-button
+  +m-button-alike('button')&attributes(attributes)
+    block
+    
+mixin m-button-a
+  +m-button-alike('a')(href="#" role="button")&attributes(attributes)
+    block
+  

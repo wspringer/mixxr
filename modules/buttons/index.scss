@@ -1,0 +1,12 @@
+button.btn, a.btn {
+  border-radius: 4px;
+  padding: 10px;
+  &.small {
+    border-radius: 4px;
+    padding: 4px;
+  }
+  &.large {
+    border-radius: 10px;
+    padding: 20px;
+  }
+}

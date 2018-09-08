@@ -1,0 +1,35 @@
+{
+  "name": "coco",
+  "version": "0.1.0",
+  "description": "Styleguide with Coco Chanel flair",
+  "main": "index.coffee",
+  "private": true,
+  "scripts": {
+    "start": "coffee ./index.coffee --server"
+  },
+  "author": "Wilfred Springer",
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "coffeescript": "^2.1.1",
+    "cssnano": "^3.10.0",
+    "jstransformer-highlight": "^1.0.1",
+    "jstransformer-html": "^0.1.0",
+    "jstransformer-html-beautify": "0.0.1",
+    "jstransformer-markdown": "^1.2.1",
+    "jstransformer-pug": "^0.3.0",
+    "jstransformer-scss": "^1.0.0",
+    "lerna": "^2.7.1",
+    "lodash": "^4.17.4",
+    "metalsmith": "^2.3.0",
+    "metalsmith-ignore": "^0.1.2",
+    "metalsmith-pug": "^2.0.0",
+    "metalsmith-sense-sass": "^2.1.0",
+    "metalsmith-serve": "0.0.7",
+    "metalsmith-watch": "^1.0.3",
+    "minimist": "^1.2.0",
+    "pug": "^2.0.0-rc.4"
+  },
+  "dependencies": {
+    "jstransformer-prismjs": "^0.1.0"
+  }
+}
