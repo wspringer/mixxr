@@ -6,6 +6,9 @@ ignore = require 'metalsmith-ignore'
 _ = require 'lodash'
 path = require 'path'
 fs = require 'fs'
+process = require 'process'
+
+noop = (files, metalsmith, done) -> done()
 
 meta = () ->
   (files, metalsmith, done) ->
@@ -44,15 +47,23 @@ Metalsmith(__dirname)
     cssnano:
       preset: 'default'
 ))
-.use(watch(
-  paths:
-    '${source}/**/*': '**/*'
-  livereload: true
-))
-.use(serve(
-  port: 8090
-  verbose: true
-))
+.use(
+  if process.env.SERVER 
+    watch(
+      paths:
+        '${source}/**/*': '**/*'
+      livereload: true
+    )
+  else noop
+)
+.use(
+  if process.env.SERVER 
+    serve(
+      port: 8090
+      verbose: true
+    )
+  else noop
+)
 .build (err) ->
   if err then console.info(err)
 
