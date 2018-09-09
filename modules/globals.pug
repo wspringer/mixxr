@@ -29,6 +29,9 @@
         },
         removeAttr: function(name) {
           delete attrs.name;
+        },
+        getAttr: function(name) {
+          return attrs[name];
         }
       };
     }

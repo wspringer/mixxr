@@ -1,0 +1,9 @@
+extends ../component
+
+block body
+  :markdown
+    
+  pre.code
+    include:prismjs(language="pug") ./sample.pug    
+  .preview
+    include ./sample.pug

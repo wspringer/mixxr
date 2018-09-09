@@ -1,0 +1,21 @@
+mixin form-group-alike(el)
+  .form-group
+    label(for=attributes.id)= attributes['m-label']
+    block
+
+mixin m-input
+  +form-group-alike('input')&attributes(attributes)
+    input.form-control(id=attributes.id)&attributes(attributes)
+
+mixin m-textarea
+  +form-group-alike('textarea')&attributes(attributes)
+    textarea.form-control(id=attributes.id)&attributes(attributes)
+
+mixin m-select
+  +form-group-alike('textarea')&attributes(attributes)
+    select.form-control(id=attributes.id)&attributes(attributes): block
+  
+mixin m-checkbox
+  .form-check
+    input.form-check-input(type="checkbox")&attributes(attributes)
+    label.form-check-label(for=attributes.id)= attributes['m-label']    

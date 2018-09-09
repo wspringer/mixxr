@@ -1,0 +1,24 @@
+mixin field-alike(el)
+  .field
+    label.label(for=attributes.id)= attributes['m-label']
+    .control
+      block
+
+mixin m-input
+  +field-alike('input')&attributes(attributes)
+    input.input(id=attributes.id)&attributes(attributes)
+
+mixin m-textarea
+  +field-alike('textarea')&attributes(attributes)
+    textarea.text-area(id=attributes.id)&attributes(attributes)
+
+mixin m-select
+  +field-alike('textarea')&attributes(attributes)
+    .select
+      select(id=attributes.id)&attributes(attributes): block
+  
+mixin m-checkbox
+  label.checkbox
+    input(type='checkbox')&attributes(attributes)
+    |&nbsp;
+    = attributes['m-label']
