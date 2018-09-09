@@ -27,14 +27,16 @@ html(lang="en" prefix="og: http://ogp.me/ns#")
       }      
   body
     +m-container
+      header
+        +m-title-1: block library
       section
-        +m-title-1#buttons Buttons
+        +m-title-2#buttons Buttons
         include buttons/index
       section 
-        +m-title-1#layout Layout
+        +m-title-2#layout Layout
         include layout/index
       section
-        +m-title-1#forms Forms
+        +m-title-2#forms Forms
         include forms/index        
     script(src="http://localhost:35729/livereload.js")
     script(src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/prism.js")
