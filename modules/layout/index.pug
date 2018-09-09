@@ -1,0 +1,9 @@
+extends ../component
+
+block body
+  :markdown
+    In order to generate a title, using either one of the `+m-title-*` mixins. Use the `+m-container` mixin to have the library provided container — although that might make sense only in cases where you intend to use the libraries' grid, which is not something promoted.     
+  pre.code
+    include:prismjs(language="pug") ./sample.pug    
+  .preview
+    include ./sample.pug

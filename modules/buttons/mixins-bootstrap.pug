@@ -17,3 +17,6 @@ mixin m-button
     
 mixin m-button-a
   +m-button-alike('a')(href="#" role="button")&attributes(attributes): block
+
+mixin m-button-input
+  +m-button-alike('input')&attributes(attributes): block

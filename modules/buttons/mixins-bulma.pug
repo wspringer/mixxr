@@ -1,14 +1,20 @@
-mixin m-button-alike(el)
+mixin m-button-alike(el)    
   - 
-    var cl = attributes['m-primary'] ? 'button is-primary' : 'button';
-  #{el}(class=cl)&attributes(phuket.strip(attributes)) 
-    block
+    const attrs = phuket.wrap(attributes);
+    attrs.addClass('button');
+    if (attrs.hasClass('m-primary')) {
+      attrs.removeClass('m-primary');
+      attrs.addClass('is-primary');
+    }    
+  #{el}&attributes(attributes): block
+    
 
 mixin m-button
-  +m-button-alike('button')&attributes(attributes)
-    block
+  +m-button-alike('button')&attributes(attributes): block
+    
     
 mixin m-button-a
-  +m-button-alike('a')(href="#" role="button")&attributes(attributes)
-    block
-  
+  +m-button-alike('a')(href="#" role="button")&attributes(attributes): block
+
+mixin m-button-input
+  +m-button-alike('input')&attributes(attributes): block
