@@ -21,7 +21,7 @@
         removeClass: function(...classes) {
           const re = RegExp(`(?:^|\\s)(${classes.join('|')})(?!\\S)`, "g");
           if (attrs.class != null) {
-            attrs.class = attrs.class.replace(re, '');
+            attrs.class = attrs.class.replace(re, '').trim();
           }
         },
         addAttr: function(name, value) {

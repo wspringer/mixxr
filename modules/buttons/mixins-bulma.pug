@@ -2,10 +2,22 @@ mixin m-button-alike(el)
   - 
     const attrs = phuket.wrap(attributes);
     attrs.addClass('button');
-    if (attrs.hasClass('m-primary')) {
-      attrs.removeClass('m-primary');
-      attrs.addClass('is-primary');
-    }    
+    const replaced = Object.entries({
+      'm-primary': 'is-primary',
+      'm-danger': 'is-danger',
+      'm-warning': 'is-warning',
+      'm-info': 'is-info',
+      'm-success': 'is-success'
+    }).some(function(entry) {
+      const [orig, replacement] = entry;
+      if (attrs.hasClass(orig)) {
+        attrs.removeClass(orig);
+        attrs.addClass(replacement);
+        return true;
+      } else {
+        return false;
+      }
+    });
   #{el}&attributes(attributes): block
     
 

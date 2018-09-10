@@ -2,8 +2,14 @@ extends ../component
 
 block body
   :markdown
-    Buttons come in a couple of different flavors. Use `+m-button` to generate `<button/>`, or `+m-button-a` to generate a button based on an anchor tag (`<a/>`). By default, it will produce secondary versions of a button. If you need a primary version, add the `m-primary` class to the mixin.          
-  include:prismjs(language="pug") ./sample.pug    
+    Buttons come in a couple of different flavors. The `m-button-*` mixins allow you to create buttons based on HTML `button` elements (`+m-button`), buttons based on HTML anchor tags (`+m-button-a`), and buttons based on HTML `input` elements (`+m-button-input`).
+  include:prismjs(language="pug") ./sample-basic.pug    
   viewer
-    include ./sample.pug
+    include ./sample-basic.pug
+  :markdown
+    If you need buttons for a specific purpose, then there are modifier classes for those specific situations. Again, all these modifier classes have a `m-*` prefix.
+  include:prismjs(language="pug") ./sample-extra.pug
+  viewer
+    include ./sample-extra.pug    
+
 
