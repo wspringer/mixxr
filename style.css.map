@@ -1,0 +1,12 @@
+{
+	"version": 3,
+	"file": "style.css",
+	"sources": [
+		"style.scss"
+	],
+	"sourcesContent": [
+		"section {\n  margin-bottom: 40px;\n  margin-top: 40px;\n}"
+	],
+	"mappings": "AAAA,AAAA,OAAO,CAAC;EACN,aAAa,EAAE,IAAK;EACpB,UAAU,EAAE,IAAK;CAClB",
+	"names": []
+}

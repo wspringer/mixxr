@@ -1,0 +1,36 @@
+<!DOCTYPE html><html lang="en" prefix="og: http://ogp.me/ns#"><head><meta charset="utf-8"><meta http-equiv="x-ui-compatible" content="ie=edge"><title>Bulma</title><meta name="description" content="Mixxr"><meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0"><link rel="stylesheet" type="text/css" href="/index.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css" crossorigin="anonymous"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/themes/prism.css"><link rel="stylesheet" href="./style.css"><style type="text/css">pre code .tag, pre code .number {
+  display: inline;
+  padding: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  text-align: inherit;
+  vertical-align: inherit;
+  border-radius: inherit;
+  font-weight: inherit;
+  white-space: inherit;
+  background: inherit;
+  margin: inherit;
+}      </style></head><body><div class="container" id="app"><header><h1 class="title is-1">Bulma</h1></header><section><h2 class="title is-2" id="buttons">Buttons</h2><p>Buttons come in a couple of different flavors. The <code>m-button-*</code> mixins allow you to create buttons based on HTML <code>button</code> elements (<code>+m-button</code>), buttons based on HTML anchor tags (<code>+m-button-a</code>), and buttons based on HTML <code>input</code> elements (<code>+m-button-input</code>).</p><pre><code class="language-pug">+m-button Simple Button
++m-button-a Anchor Button
++m-button-input(type=&quot;submit&quot; value=&quot;Submit Button&quot;)</code></pre><viewer><button class="button">Simple Button</button><a class="button" href="#" role="button">Anchor Button</a><input class="button" type="submit" value="Submit Button"></input></viewer><p>If you need buttons for a specific purpose, then there are modifier classes for those specific situations. Again, all these modifier classes have a <code>m-*</code> prefix.</p><pre><code class="language-pug">+m-button.m-primary Primary
++m-button.m-warning Warning
++m-button.m-success Success
++m-button.m-info Info
++m-button.m-danger Danger
+</code></pre><viewer><button class="button is-primary">Primary</button><button class="button is-warning">Warning</button><button class="button is-success">Success</button><button class="button is-info">Info</button><button class="button is-danger">Danger</button></viewer></section><section> <h2 class="title is-2" id="layout">Layout</h2><p>In order to generate a title, using either one of the <code>+m-title-*</code> mixins. Use the <code>+m-container</code> mixin to have the library provided container — although that might make sense only in cases where you intend to use the libraries&#39; grid, which is not something promoted.     </p><pre><code class="language-pug">+m-container
+  +m-title-1 Title 1
+  +m-title-2 Title 2
+  +m-title-3 Title 3
+  +m-title-4 Title 4
+  +m-title-5 Title 5
+  +m-title-6 Title 6
+</code></pre><viewer><div class="container"><h1 class="title is-1">Title 1</h1><h2 class="title is-2">Title 2</h2><h3 class="title is-3">Title 3</h3><h4 class="title is-4">Title 4</h4><h5 class="title is-5">Title 5</h5><h6 class="title-is6">Title 6</h6></div></viewer></section><section><h2 class="title is-2" id="forms">Forms</h2><p>There are currently four different form-based mixins. All of them accept an additional attribute called <code>m-label</code>, which is the label that should be associated to the component.</p><pre><code class="language-pug">form
+  +m-input#name(m-label=&quot;Name&quot; type=&quot;text&quot;)
+  +m-input#password(m-label=&quot;Password&quot; type=&quot;password&quot; placeholder=&quot;Password&quot;)
+  +m-textarea#message(m-label=&quot;Message&quot;)
+  +m-select(m-label=&quot;Subject&quot;)
+    option Select dropdown
+    option With options
+  +m-checkbox#agreed(m-label=&quot;I agree&quot;)    
+      
+</code></pre><viewer><form><div class="field"><label class="label" for="name">Name</label><div class="control"><input class="input" id="name" m-label="Name" type="text"></div></div><div class="field"><label class="label" for="password">Password</label><div class="control"><input class="input" id="password" m-label="Password" type="password" placeholder="Password"></div></div><div class="field"><label class="label" for="message">Message</label><div class="control"><textarea class="textarea" id="message" m-label="Message"></textarea></div></div><div class="field"><label class="label">Subject</label><div class="control"><div class="select"><select m-label="Subject"><option>Select dropdown</option><option>With options</option></select></div></div></div><label class="checkbox"><input type="checkbox" id="agreed" m-label="I agree">&nbsp;I agree</label></form></viewer></section></div><script src="http://localhost:35729/livereload.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/prism.js"></script><script src="https://cdn.rawgit.com/wspringer/prism/135a74b1bb4ca67db7a3b12524d6a3c5f361e87d/components/prism-pug.js"></script><script src="https://cdn.rawgit.com/PrismJS/prism/b520e1b6/components/prism-markup.min.js"></script><script src="//cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/js-beautify/1.8.3-rc3/beautify-html.js"></script><script src="./viewer.js"></script></body></html>
