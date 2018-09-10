@@ -22,6 +22,7 @@
     "lerna": "^2.7.1",
     "lodash": "^4.17.4",
     "metalsmith": "^2.3.0",
+    "metalsmith-coffee": "0.0.2",
     "metalsmith-ignore": "^0.1.2",
     "metalsmith-pug": "^2.0.0",
     "metalsmith-sense-sass": "^2.1.0",
@@ -31,6 +32,7 @@
     "pug": "^2.0.0-rc.4"
   },
   "dependencies": {
-    "jstransformer-prismjs": "^0.1.0"
+    "jstransformer-prismjs": "^0.1.0",
+    "vue": "^2.5.17"
   }
 }

@@ -2,6 +2,7 @@ Metalsmith = require 'metalsmith'
 serve = require 'metalsmith-serve'
 watch = require 'metalsmith-watch'
 pug = require 'metalsmith-pug'
+coffee = require 'metalsmith-coffee'
 ignore = require 'metalsmith-ignore'
 _ = require 'lodash'
 path = require 'path'
@@ -39,6 +40,7 @@ Metalsmith(__dirname)
 .use(pug(
   useMetadata: true
 ))
+.use(coffee({}))
 .use(require('metalsmith-sense-sass')(
   sass:
     sourceMap: true
