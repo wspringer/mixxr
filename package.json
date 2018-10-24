@@ -1,12 +1,11 @@
 {
-  "name": "coco",
+  "name": "mixxr",
   "version": "0.1.0",
-  "description": "Styleguide with Coco Chanel flair",
-  "main": "index.coffee",
+  "description": "Mixins for CSS framework agnostic markup",
   "private": true,
   "scripts": {
-    "start": "SERVER=true coffee ./index.coffee",
-    "build": "coffee ./index.coffee"
+    "start": "SERVER=true coffee ./build/index.coffee",
+    "build": "coffee ./build/index.coffee"
   },
   "author": "Wilfred Springer",
   "license": "UNLICENSED",
@@ -17,9 +16,9 @@
     "jstransformer-html": "^0.1.0",
     "jstransformer-html-beautify": "0.0.1",
     "jstransformer-markdown": "^1.2.1",
+    "jstransformer-prismjs": "^0.1.0",
     "jstransformer-pug": "^0.3.0",
     "jstransformer-scss": "^1.0.0",
-    "lerna": "^2.7.1",
     "lodash": "^4.17.4",
     "metalsmith": "^2.3.0",
     "metalsmith-coffee": "0.0.2",
@@ -30,9 +29,5 @@
     "metalsmith-watch": "^1.0.3",
     "minimist": "^1.2.0",
     "pug": "^2.0.0-rc.4"
-  },
-  "dependencies": {
-    "jstransformer-prismjs": "^0.1.0",
-    "vue": "^2.5.17"
   }
 }

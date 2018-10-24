@@ -28,8 +28,8 @@ meta = () ->
     
 
 Metalsmith(__dirname)
-.source('./modules')
-.destination('./dist')
+.source('../modules')
+.destination('../dist')
 .use(ignore [
   "layout.pug",
   "component.pug",
