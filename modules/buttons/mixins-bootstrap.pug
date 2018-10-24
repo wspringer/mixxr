@@ -25,11 +25,13 @@ mixin m-button-alike(el)
     
 
 mixin m-button
-  +m-button-alike('button')&attributes(attributes): block
-    
+  +m-button-alike('button')&attributes(attributes): block    
     
 mixin m-button-a
   +m-button-alike('a')(href="#" role="button")&attributes(attributes): block
 
 mixin m-button-input
   +m-button-alike('input')&attributes(attributes): block
+
+mixin m-button-nuxt-link
+  +m-button-alike('nuxt-link')(role="button")&attributes(attributes): block  
