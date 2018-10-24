@@ -5,7 +5,7 @@
   "private": true,
   "scripts": {
     "start": "SERVER=true coffee ./build/index.coffee",
-    "build": "coffee ./build/index.coffee"
+    "prepare": "coffee ./build/index.coffee"
   },
   "author": "Wilfred Springer",
   "license": "UNLICENSED",
