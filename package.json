@@ -2,7 +2,6 @@
   "name": "mixxr",
   "version": "0.1.0",
   "description": "Mixins for CSS framework agnostic markup",
-  "private": true,
   "scripts": {
     "start": "SERVER=true coffee ./build/index.coffee",
     "prepare": "coffee ./build/index.coffee"
