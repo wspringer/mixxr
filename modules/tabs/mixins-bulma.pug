@@ -10,4 +10,4 @@ mixin m-tabs(links, tab = 'a', tabAttrs = {}, tabContainerAttrs = {}, tabContain
           #{tab}= link.label
 
 mixin m-tabs-nuxt-link(links, tabAttrs, tabContainerAttrs)
-  +m-tabs(links, 'a', Object.assign({tag: 'li'}, { 'active-class': 'is-active' }), {}, 'nuxt-link')
+  +m-tabs(links, 'a', Object.assign({tag: 'li'}, { 'active-class': 'is-active' }), tabContainerAttrs, 'nuxt-link')
