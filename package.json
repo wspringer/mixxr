@@ -1,6 +1,6 @@
 {
   "name": "mixxr",
-  "version": "0.6.1",
+  "version": "0.6.2",
   "description": "Mixins for CSS framework agnostic markup",
   "scripts": {
     "start": "SERVER=true coffee ./build/index.coffee",
