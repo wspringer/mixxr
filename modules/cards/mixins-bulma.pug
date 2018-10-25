@@ -1,0 +1,21 @@
+mixin m-card
+  .card&attributes(attributes): block
+
+mixin m-card-image(src, alt)
+  .card-image
+    figure.image
+      img(src=src, alt=alt)
+
+mixin m-card-content
+  .card-content&attributes(attributes): block
+
+mixin m-card-title
+  .title&attributes(attributes): block  
+
+mixin m-card-subtitle
+  .subtitle&attributes(attributes): block  
+
+mixin m-card-text
+  .content&attributes(attributes): block
+
+
