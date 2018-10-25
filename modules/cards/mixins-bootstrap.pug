@@ -1,19 +1,19 @@
-mixin card
+mixin m-card
   .card&attributes(attributes): block
 
-mixin card-image(src, alt)
+mixin m-card-image(src, alt)
   img.card-img-top(src=src, alt=alt)&attributes(attributes)
 
-mixin card-content
+mixin m-card-content
   .card-body&attributes(attributes): block
 
-mixin card-title
+mixin m-card-title
   h5.card-title&attributes(attributes): block  
 
-mixin card-subtitle
+mixin m-card-subtitle
   h6.card-subtitle.text-muted&attributes(attributes): block  
 
-mixin card-text
+mixin m-card-text
   .card-text&attributes(attributes): block
 
 
