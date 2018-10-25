@@ -1,0 +1,12 @@
+mixin m-tabs(links, tab = 'a', tabAttrs = {})
+  ul.nav.nav-tabs
+    for link in links
+      li.nav-item
+        - 
+          attrs = Object.assign({}, link);
+          delete attrs.label;
+          Object.assign(attrs, tabAttrs);
+        #{tab}.nav-link&attributes(attrs)= link.label
+
+mixin m-tabs-nuxt-link(links, tabAttrs)
+  +m-tabs(links, 'nuxt-link', Object.assign({}, { 'active-class': 'active' }))

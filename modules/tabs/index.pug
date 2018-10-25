@@ -1,0 +1,25 @@
+extends ../component
+
+block body
+  :markdown
+    Generate tabs. In its most simple shape, the only thing you need to pass in is an array of objects with *at least* a `label` property. 
+  include:prismjs(language="pug") ./sample-basic.pug    
+  viewer
+    include ./sample-basic.pug
+
+  :markdown
+    If you want, then you can pass in more than just a label for a link. All those additional attributes will be copied
+    to the 'tab' element. The type of tab element is configurable too. That's the second argument of the mixin. And then 
+    the third argument allows you to pass in additional common properties for each tab.
+  include:prismjs(language="pug") ./sample-advanced.pug    
+  viewer
+    include ./sample-advanced.pug
+
+  :markdown
+    There is still a problem with the example above. The proper value for the `active-class` property is 
+    still dependenent on wether you're using Bootstrap or Bulma. For that reason, mixxr offers an additional
+    mixin called `m-tabs-nuxt-link` that offers a more compact notation of the above, *plus* it sets
+    the `active-class` correctly automatically.
+  include:prismjs(language="pug") ./sample-nuxt.pug    
+  viewer
+    include ./sample-nuxt.pug    
