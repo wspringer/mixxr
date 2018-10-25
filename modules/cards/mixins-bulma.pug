@@ -1,10 +1,10 @@
 mixin m-card
   .card&attributes(attributes): block
 
-mixin m-card-image(src, alt)
+mixin m-card-image
   .card-image
     figure.image
-      img(src=src, alt=alt)
+      img&attributes(attributes)
 
 mixin m-card-content
   .card-content&attributes(attributes): block

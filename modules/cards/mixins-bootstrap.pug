@@ -1,8 +1,8 @@
 mixin m-card
   .card&attributes(attributes): block
 
-mixin m-card-image(src, alt)
-  img.card-img-top(src=src, alt=alt)&attributes(attributes)
+mixin m-card-image
+  img.card-img-top&attributes(attributes)
 
 mixin m-card-content
   .card-body&attributes(attributes): block
