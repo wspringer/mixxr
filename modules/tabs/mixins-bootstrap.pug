@@ -1,7 +1,7 @@
-mixin m-tabs(links, tab = 'a', tabAttrs = {}, tabContainerAttrs = {})
+mixin m-tabs(links, tab = 'a', tabAttrs = {}, tabContainerAttrs = {}, tabContainer = 'li')
   ul.nav.nav-tabs
     for link in links
-      li.nav-item&attributes(tabContainerAttrs)
+      #{tabContainer}.nav-item&attributes(tabContainerAttrs)
         - 
           attrs = Object.assign({}, link);
           delete attrs.label;

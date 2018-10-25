@@ -1,13 +1,13 @@
-mixin m-tabs(links, tab = 'a', tabAttrs = {}, tabContainerAttrs = {})
+mixin m-tabs(links, tab = 'a', tabAttrs = {}, tabContainerAttrs = {}, tabContainer = 'li')
   div.tabs
     ul
       for link in links
-        li&attributes(tabContainerAttrs)
-          - 
-            attrs = Object.assign({}, link);
-            delete attrs.label;
-            Object.assign(attrs, tabAttrs);
-          #{tab}&attributes(attrs)= link.label
+        - 
+          attrs = Object.assign({}, link);
+          delete attrs.label;
+          Object.assign(attrs, tabAttrs, tabContainerAttrs);
+        #{tabContainer}&attributes(attrs)
+          #{tab}= link.label
 
 mixin m-tabs-nuxt-link(links, tabAttrs, tabContainerAttrs)
-  +m-tabs(links, 'nuxt-link', Object.assign({}, { 'active-class': 'is-active' }), tabContainerAttrs)
+  +m-tabs(links, 'a', Object.assign({tag: 'li'}, { 'active-class': 'is-active' }), {}, 'nuxt-link')
