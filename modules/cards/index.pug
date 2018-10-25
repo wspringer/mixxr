@@ -1,0 +1,12 @@
+extends ../component
+
+block body
+  :markdown
+    Simple cards.    
+  include:prismjs(language="pug") ./sample.pug    
+  viewer
+    include ./sample.pug
+
+  include:prismjs(language="pug") ./sample-image.pug    
+  viewer
+    include ./sample-image.pug
